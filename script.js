@@ -19,33 +19,33 @@ document.addEventListener('DOMContentLoaded', function() {
       var links = [...jsonData["culprits_path_graph"][0].links];
       for (let j = 0; j < links.length; ++j) {
         let targets = edges[links[j].source];
-          targets.add(links[j].target);
-          edges[links[j].source] = targets;
+        targets.add(links[j].target);
+        edges[links[j].source] = targets;
       }
       // add nodes 
       var elements = [];
       for (let nodeId in nodes) {
         elements.push({
           group: 'nodes',
-          data: { 
+          data: {
             id: nodeId,
           }
         });
       }
       // add edges 
-      for (let sourceNode in edges){
-        for ( let targetNode of edges[sourceNode]) {
+      for (let sourceNode in edges) {
+        for (let targetNode of edges[sourceNode]) {
           elements.push({
-          group: 'edges',
-          data: {
-            id: sourceNode + " -> " + targetNode,
-            source: sourceNode,
-            target: targetNode,
-          }
-        });
+            group: 'edges',
+            data: {
+              id: sourceNode + " -> " + targetNode,
+              source: sourceNode,
+              target: targetNode,
+            }
+          });
         }
       }
-      
+
       // MANU START config 
       var cy = cytoscape({
         container: $('#cy'),
@@ -55,17 +55,17 @@ document.addEventListener('DOMContentLoaded', function() {
             selector: 'node',
             labelValign: 'middle',
             style: {
-              "background-color": "#333",
-              "background-opacity": 0.95,
-              "text-wrap": "wrap",
-              label: "data(id)",
+              'background-color': '#333',
+              'background-opacity': 0.95,
+              'text-wrap': 'wrap',
+              label: 'data(id)',
               color: '#f5f5f5',
-              padding: "6px",
-              shape: "rectangle",
+              padding: '6px',
+              shape: 'rectangle',
               width: 100,
               height: 50,
-              "text-valign": "center",
-              "text-halign": "center",
+              'text-valign': 'center',
+              'text-halign': 'center',
               'border-color': 'red',
               'border-opacity': '0.85',
             },
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
             selector: ':selected',
             style: {
               'background-color': '#FFC028',
-              "background-opacity": 0.95,
+              'background-opacity': 0.95,
               'line-color': '#FFC028',
               'target-arrow-color': '#FFC028',
               'source-arrow-color': '#FFC028',
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
             selector: ':active',
             style: {
               'background-color': '#FFC028',
-              "background-opacity": 0.95,
+              'background-opacity': 0.95,
               'line-color': '#FFC028',
               'target-arrow-color': '#FFC028',
               'source-arrow-color': '#FFC028',
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // MANU END config 
 
       document.getElementById("title").textContent = "Explainable Schedule";
-      cy.on('mouseover', 'node', function(event) {
+      cy.on("mouseover", "node", function(event) {
         let node = event.target;
         $("#NODE_ID").text(node.id());
         $("#ACTIVITY_NAME").text(nodes[node.id()].NAME);
