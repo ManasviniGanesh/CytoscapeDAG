@@ -50,24 +50,28 @@ document.addEventListener('DOMContentLoaded', function() {
       var cy = cytoscape({
         container: $('#cy'),
         elements: elements,
-        style: [ // the stylesheet for the graph
+        style: [
           {
             selector: 'node',
-            labelValign: 'middle',
             style: {
-              'background-color': '#333',
-              'background-opacity': 0.95,
+              'label': 'data(id)',
               'text-wrap': 'wrap',
-              label: 'data(id)',
-              color: '#f5f5f5',
-              padding: '6px',
-              shape: 'rectangle',
-              width: 100,
-              height: 50,
+              'font-family': 'serif',
+              'color': '#f5f5f5',
               'text-valign': 'center',
               'text-halign': 'center',
-              'border-color': 'red',
-              'border-opacity': '0.85',
+              'width': 100,
+              'height': 50,
+              'ghost': 'yes',
+              'ghost-offset-x': 3,
+              'ghost-offset-y': 4,
+              'ghost-opacity': 0.2,
+              'shape': 'barrel',
+              'padding': '6px',
+              'overlay-color': '#a5a5a5',
+              'overlay-padding': '3px',
+              'background-color': '#485461',
+              'background-image': 'radial-gradient(315deg, #485461 0%, #28313b 74%);',
             },
           },
 
@@ -75,71 +79,57 @@ document.addEventListener('DOMContentLoaded', function() {
             selector: 'edge',
             style: {
               'width': 3,
-              'line-color': '#a0a0a0',
+              'line-color': '#e9bcb7',
               'target-arrow-color': '#a0a0a0',
               'target-arrow-shape': 'triangle',
               'curve-style': 'unbundled-bezier',
+              'overlay-color': '#a5a5a5',
+              'overlay-padding': '5px',
             }
           },
 
           {
             selector: ':selected',
             style: {
-              'background-color': '#FFC028',
-              'background-opacity': 0.95,
-              'line-color': '#FFC028',
-              'target-arrow-color': '#FFC028',
-              'source-arrow-color': '#FFC028',
+              'background-color': '#9e768f',
+              'background-image': 'radial-gradient(315deg, #9e768f 0%, #9fa4c4 74%);',
               'border-color': '#ccc',
-              'border-width': '2px',
               'border-opacity': '0.85',
-              color: '#fff',
+              'border-width': '2px',
+              'color': '#fff',
+              'line-color': '#9e768f',
+              'target-arrow-color': '#EF9D34',
+              'source-arrow-color': '#EF9D34',
             }
           },
 
           {
             selector: ':active',
             style: {
-              'background-color': '#FFC028',
-              'background-opacity': 0.95,
-              'line-color': '#FFC028',
-              'target-arrow-color': '#FFC028',
-              'source-arrow-color': '#FFC028',
+              'background-color': '#a5a4cb',
+              'background-image': 'radial-gradient(315deg, #a5a4cb 0%, #bf3a30 74%);',
               'border-color': '#f5f5f5',
-              'border-width': '2px',
               'border-opacity': '0.85',
-              color: '#fff',
+              'border-width': '2px',
+              'color': '#fff',
+              'line-color': '#a5a4cb',
+              'target-arrow-color': '#EF9D34',
+              'source-arrow-color': '#EF9D34',
             }
           },
 
         ],
-
-        layout: {
-          name: 'grid',
-
-          fit: true, // whether to fit the viewport to the graph
-          padding: 30, // the padding on fit
-          boundingBox: undefined, // constrain layout bounds; { x1, y1, x2, y2 } or { x1, y1, w, h }
-          avoidOverlap: true, // prevents node overlap, may overflow boundingBox and radius if not enough space
-          nodeDimensionsIncludeLabels: false, // Excludes the label when calculating node bounding boxes for the layout algorithm
-          spacingFactor: undefined, // Applies a multiplicative factor (>0) to expand or compress the overall area that the nodes take up
-          radius: undefined, // the radius of the circle
-          startAngle: 3 / 2 * Math.PI, // where nodes start in radians
-          sweep: undefined, // how many radians should be between the first and last node (defaults to full circle)
-          clockwise: true, // whether the layout should go clockwise (true) or counterclockwise/anticlockwise (false)
-          sort: undefined, // a sorting function to order the nodes; e.g. function(a, b){ return a.data('weight') - b.data('weight') }
-          animate: true, // whether to transition the node positions
-          animationDuration: 500, // duration of animation in ms if enabled
-          animationEasing: undefined, // easing of animation if enabled
-          animateFilter: function(node, i) { return true; }, // a function that determines whether the node should be animated.  All nodes animated by default on animate enabled.  Non-animated nodes are positioned immediately when the layout starts
-          ready: undefined, // callback on layoutready
-          stop: undefined, // callback on layoutstop
-          transform: function(node, position) { return position; } // transform a given node position. Useful for changing flow direction in discrete layouts 
-        }
       });
+      let options = {
+        name: 'circle',
+        avoidOverlap: true, // prevents node overlap, may overflow boundingBox and radius if not enough space,
+        animate: true, // whether to transition the node positions
+        animationDuration: 500, // duration of animation in ms if enabled
+        animateFilter: function(node, i) { return true; }, // a function that determines whether the node should be animated.  All nodes animated by default on animate enabled.  Non-animated nodes are positioned immediately when the layout starts
+      };
+      cy.layout(options).run();
       // MANU END config 
-
-      document.getElementById("title").textContent = "Explainable Schedule";
+      $("#TITLE").textContent = "Explainable Schedule";
       cy.on("mouseover", "node", function(event) {
         let node = event.target;
         $("#NODE_ID").text(node.id());
