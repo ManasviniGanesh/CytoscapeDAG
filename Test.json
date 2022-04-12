@@ -1,857 +1,386 @@
 {
-    "node": "WT.1700",
-    "percent": 0,
-    "free_float": 56,
-    "pred_graph": [
+  "node": "WT.1700",
+  "activity_type": "FINISH_MILESTONE",
+  "pred_graph": [
       [
-        {
-          "node": "WT.1840",
-          "percent": 0,
-          "free_float": 0,
-          "is_culprit": true,
-          "predecessor": {},
-          "activity_name": "B6 WT Epoxy C/D - After Equipment Install",
-          "activity_type": "TASK",
-          "cpm_start_time": "2022-01-18 08:00:00",
-          "schedule_start": "2022-01-18 08:00:00",
-          "cpm_finish_time": "2022-03-24 08:00:00",
-          "schedule_end_time": "2022-01-28 17:00:00",
-          "culprit_path_graph": {
-            "graph": {},
-            "links": [
-              {
-                "source": "WT.1840",
-                "target": "WT.1700"
-              },
-              {
-                "source": "WT.1840",
-                "target": "WT.1900"
-              },
-              {
-                "source": "WT.1900",
-                "target": "WT.1700"
-              },
-              {
-                "source": "WT.1900",
-                "target": "WT.1750"
-              },
-              {
-                "source": "WT.1750",
-                "target": "WT.1700"
-              }
-            ],
-            "nodes": [
-              {
-                "id": "WT.1840",
-                "NAME": "B6 WT Epoxy C/D - After Equipment Install",
-                "PERCENT": 0,
-                "FREE_FLOAT": 0,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2022-01-18 08:00:00",
-                "CPM_FINISH_TIME": "2022-03-24 08:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-01-28 17:00:00",
-                "SCHEDULED_START_TIME": "2022-01-18 08:00:00"
-              },
-              {
-                "id": "WT.1700",
-                "NAME": "B6 WT Water Treatment Area C/D Construction Complete",
-                "PERCENT": 0,
-                "FREE_FLOAT": 56,
-                "ACTIVITY_TYPE": "FINISH_MILESTONE",
-                "CPM_START_TIME": "2022-04-06 17:00:00",
-                "CPM_FINISH_TIME": "2022-04-06 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-03-25 17:00:00",
-                "SCHEDULED_START_TIME": "2022-03-25 17:00:00"
-              },
-              {
-                "id": "WT.1900",
-                "NAME": "B6 WT Doors & Hardware C/D",
-                "PERCENT": 0,
-                "FREE_FLOAT": 0,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2022-03-24 08:00:00",
-                "CPM_FINISH_TIME": "2022-03-24 08:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-03-18 17:00:00",
-                "SCHEDULED_START_TIME": "2022-03-07 08:00:00"
-              },
-              {
-                "id": "WT.1750",
-                "NAME": "B6 WT Final Details C/D",
-                "PERCENT": 0,
-                "FREE_FLOAT": 5,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2022-03-24 08:00:00",
-                "CPM_FINISH_TIME": "2022-03-30 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-03-25 17:00:00",
-                "SCHEDULED_START_TIME": "2022-03-21 08:00:00"
-              }
-            ],
-            "directed": true,
-            "multigraph": false
+          {
+              "node": "WT.PLC.2840",
+              "activity_type": "TASK",
+              "schedule_start": "2021-08-23 08:00:00",
+              "schedule_end_time": "2021-09-10 17:00:00",
+              "cpm_start_time": "2021-11-19 00:00:00",
+              "cpm_finish_time": "2022-03-24 08:00:00",
+              "is_culprit": true,
+              "free_float": 0.0,
+              "predecessor": {},
+              "percent": 0.4286,
+              "activity_name": "B6 WT FCU and EF Controls C/D"
           }
-        }
       ],
       [
-        {
-          "node": "WT.PLC.2840",
-          "percent": 0.4286,
-          "free_float": 0,
-          "is_culprit": true,
-          "predecessor": {},
-          "activity_name": "B6 WT FCU and EF Controls C/D",
-          "activity_type": "TASK",
-          "cpm_start_time": "2021-11-19 00:00:00",
-          "schedule_start": "2021-08-23 08:00:00",
-          "cpm_finish_time": "2022-03-24 08:00:00",
-          "schedule_end_time": "2021-09-10 17:00:00",
-          "culprit_path_graph": {
-            "graph": {},
-            "links": [
-              {
-                "source": "WT.PLC.2840",
-                "target": "WT.1710"
-              },
-              {
-                "source": "WT.1710",
-                "target": "WT.1720"
-              },
-              {
-                "source": "WT.1720",
-                "target": "WT.1724"
-              },
-              {
-                "source": "WT.1724",
-                "target": "WT.1730"
-              },
-              {
-                "source": "WT.1724",
-                "target": "WT.1770"
-              },
-              {
-                "source": "WT.1724",
-                "target": "WT.1790"
-              },
-              {
-                "source": "WT.1724",
-                "target": "WT.1900"
-              },
-              {
-                "source": "WT.1724",
-                "target": "WT.PLC.2850"
-              },
-              {
-                "source": "WT.1730",
-                "target": "WT.1900"
-              },
-              {
-                "source": "WT.1900",
-                "target": "WT.1700"
-              },
-              {
-                "source": "WT.1900",
-                "target": "WT.1750"
-              },
-              {
-                "source": "WT.1750",
-                "target": "WT.1700"
-              },
-              {
-                "source": "WT.1770",
-                "target": "WT.1730"
-              },
-              {
-                "source": "WT.1770",
-                "target": "WT.1900"
-              },
-              {
-                "source": "WT.1790",
-                "target": "WT.1730"
-              },
-              {
-                "source": "WT.1790",
-                "target": "WT.1740"
-              },
-              {
-                "source": "WT.1740",
-                "target": "WT.1750"
-              },
-              {
-                "source": "WT.1740",
-                "target": "WT.1840"
-              },
-              {
-                "source": "WT.1840",
-                "target": "WT.1700"
-              },
-              {
-                "source": "WT.1840",
-                "target": "WT.1900"
-              },
-              {
-                "source": "WT.PLC.2850",
-                "target": "WT.PLC.2860"
-              },
-              {
-                "source": "WT.PLC.2860",
-                "target": "WT.1700"
-              }
-            ],
-            "nodes": [
-              {
-                "id": "WT.PLC.2840",
-                "NAME": "B6 WT FCU and EF Controls C/D",
-                "PERCENT": 0.4286,
-                "FREE_FLOAT": 0,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2021-11-19 00:00:00",
-                "CPM_FINISH_TIME": "2022-03-24 08:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2021-09-10 17:00:00",
-                "SCHEDULED_START_TIME": "2021-08-23 08:00:00"
-              },
-              {
-                "id": "WT.1710",
-                "NAME": "B6 WT Set / Install Tanks (Inside) C/D",
-                "PERCENT": 1,
-                "FREE_FLOAT": -100000,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2021-09-01 08:00:00",
-                "CPM_FINISH_TIME": "2021-09-08 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2021-09-08 17:00:00",
-                "SCHEDULED_START_TIME": "2021-09-01 08:00:00"
-              },
-              {
-                "id": "WT.1720",
-                "NAME": "B6 WT Stackout / Tie In Pumps / Install Humidifiers C/D - Start",
-                "PERCENT": 1,
-                "FREE_FLOAT": -100000,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2021-09-09 08:00:00",
-                "CPM_FINISH_TIME": "2021-09-29 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2021-09-29 17:00:00",
-                "SCHEDULED_START_TIME": "2021-09-09 08:00:00"
-              },
-              {
-                "id": "WT.1724",
-                "NAME": "B6 WT Stackout / Tie In Pumps / Install Humidifiers C/D - Finish",
-                "PERCENT": 1,
-                "FREE_FLOAT": -100000,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2021-09-30 08:00:00",
-                "CPM_FINISH_TIME": "2021-11-19 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2021-10-20 17:00:00",
-                "SCHEDULED_START_TIME": "2021-09-30 08:00:00"
-              },
-              {
-                "id": "WT.1730",
-                "NAME": "B6 WT Testing & Flushing C/D",
-                "PERCENT": 1,
-                "FREE_FLOAT": -100000,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2022-02-07 08:00:00",
-                "CPM_FINISH_TIME": "2022-02-18 00:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-02-17 17:00:00",
-                "SCHEDULED_START_TIME": "2022-02-07 08:00:00"
-              },
-              {
-                "id": "WT.1900",
-                "NAME": "B6 WT Doors & Hardware C/D",
-                "PERCENT": 0,
-                "FREE_FLOAT": 0,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2022-03-24 08:00:00",
-                "CPM_FINISH_TIME": "2022-03-24 08:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-03-18 17:00:00",
-                "SCHEDULED_START_TIME": "2022-03-07 08:00:00"
-              },
-              {
-                "id": "WT.1700",
-                "NAME": "B6 WT Water Treatment Area C/D Construction Complete",
-                "PERCENT": 0,
-                "FREE_FLOAT": 56,
-                "ACTIVITY_TYPE": "FINISH_MILESTONE",
-                "CPM_START_TIME": "2022-04-06 17:00:00",
-                "CPM_FINISH_TIME": "2022-04-06 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-03-25 17:00:00",
-                "SCHEDULED_START_TIME": "2022-03-25 17:00:00"
-              },
-              {
-                "id": "WT.1750",
-                "NAME": "B6 WT Final Details C/D",
-                "PERCENT": 0,
-                "FREE_FLOAT": 5,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2022-03-24 08:00:00",
-                "CPM_FINISH_TIME": "2022-03-30 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-03-25 17:00:00",
-                "SCHEDULED_START_TIME": "2022-03-21 08:00:00"
-              },
-              {
-                "id": "WT.1770",
-                "NAME": "B6 WT Set Chemical Treatment / Filter Skid C/D",
-                "PERCENT": 1,
-                "FREE_FLOAT": -100000,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2021-10-21 08:00:00",
-                "CPM_FINISH_TIME": "2021-11-03 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2021-11-03 17:00:00",
-                "SCHEDULED_START_TIME": "2021-10-21 08:00:00"
-              },
-              {
-                "id": "WT.1790",
-                "NAME": "B6 WT Line Voltage to Equipment C/D",
-                "PERCENT": 1,
-                "FREE_FLOAT": -100000,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2021-11-22 08:00:00",
-                "CPM_FINISH_TIME": "2022-02-07 08:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2021-12-30 17:00:00",
-                "SCHEDULED_START_TIME": "2021-11-22 08:00:00"
-              },
-              {
-                "id": "WT.1740",
-                "NAME": "B6 WT Pipe Insulation C/D",
-                "PERCENT": 1,
-                "FREE_FLOAT": -100000,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2022-01-11 08:00:00",
-                "CPM_FINISH_TIME": "2022-02-02 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-01-25 17:00:00",
-                "SCHEDULED_START_TIME": "2022-01-11 08:00:00"
-              },
-              {
-                "id": "WT.1840",
-                "NAME": "B6 WT Epoxy C/D - After Equipment Install",
-                "PERCENT": 0,
-                "FREE_FLOAT": 0,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2022-01-18 08:00:00",
-                "CPM_FINISH_TIME": "2022-03-24 08:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-01-28 17:00:00",
-                "SCHEDULED_START_TIME": "2022-01-18 08:00:00"
-              },
-              {
-                "id": "WT.PLC.2850",
-                "NAME": "B6 WT Trim WT Devices, Pull Wire & Terminate C/D",
-                "PERCENT": 0.4667,
-                "FREE_FLOAT": 0,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2021-12-06 08:00:00",
-                "CPM_FINISH_TIME": "2022-03-24 08:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2021-12-28 17:00:00",
-                "SCHEDULED_START_TIME": "2021-12-06 08:00:00"
-              },
-              {
-                "id": "WT.PLC.2860",
-                "NAME": "B6 WT Labeling C/D",
-                "PERCENT": 0,
-                "FREE_FLOAT": 0,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2022-03-24 08:00:00",
-                "CPM_FINISH_TIME": "2022-04-06 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-03-17 17:00:00",
-                "SCHEDULED_START_TIME": "2022-03-04 08:00:00"
-              }
-            ],
-            "directed": true,
-            "multigraph": false
+          {
+              "node": "WT.PLC.2850",
+              "activity_type": "TASK",
+              "schedule_start": "2021-12-06 08:00:00",
+              "schedule_end_time": "2021-12-28 17:00:00",
+              "cpm_start_time": "2021-12-06 08:00:00",
+              "cpm_finish_time": "2022-03-24 08:00:00",
+              "is_culprit": true,
+              "free_float": 0.0,
+              "predecessor": {},
+              "percent": 0.4667,
+              "activity_name": "B6 WT Trim WT Devices, Pull Wire & Terminate C/D"
           }
-        }
       ],
       [
-        {
-          "node": "WT.PLC.2850",
-          "percent": 0.4667,
-          "free_float": 0,
-          "is_culprit": true,
-          "predecessor": {},
-          "activity_name": "B6 WT Trim WT Devices, Pull Wire & Terminate C/D",
-          "activity_type": "TASK",
-          "cpm_start_time": "2021-12-06 08:00:00",
-          "schedule_start": "2021-12-06 08:00:00",
-          "cpm_finish_time": "2022-03-24 08:00:00",
-          "schedule_end_time": "2021-12-28 17:00:00",
-          "culprit_path_graph": {
-            "graph": {},
-            "links": [
-              {
-                "source": "WT.PLC.2850",
-                "target": "WT.PLC.2860"
-              },
-              {
-                "source": "WT.PLC.2860",
-                "target": "WT.1700"
-              }
-            ],
-            "nodes": [
-              {
-                "id": "WT.PLC.2850",
-                "NAME": "B6 WT Trim WT Devices, Pull Wire & Terminate C/D",
-                "PERCENT": 0.4667,
-                "FREE_FLOAT": 0,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2021-12-06 08:00:00",
-                "CPM_FINISH_TIME": "2022-03-24 08:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2021-12-28 17:00:00",
-                "SCHEDULED_START_TIME": "2021-12-06 08:00:00"
-              },
-              {
-                "id": "WT.PLC.2860",
-                "NAME": "B6 WT Labeling C/D",
-                "PERCENT": 0,
-                "FREE_FLOAT": 0,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2022-03-24 08:00:00",
-                "CPM_FINISH_TIME": "2022-04-06 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-03-17 17:00:00",
-                "SCHEDULED_START_TIME": "2022-03-04 08:00:00"
-              },
-              {
-                "id": "WT.1700",
-                "NAME": "B6 WT Water Treatment Area C/D Construction Complete",
-                "PERCENT": 0,
-                "FREE_FLOAT": 56,
-                "ACTIVITY_TYPE": "FINISH_MILESTONE",
-                "CPM_START_TIME": "2022-04-06 17:00:00",
-                "CPM_FINISH_TIME": "2022-04-06 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-03-25 17:00:00",
-                "SCHEDULED_START_TIME": "2022-03-25 17:00:00"
-              }
-            ],
-            "directed": true,
-            "multigraph": false
+          {
+              "node": "WT.1840",
+              "activity_type": "TASK",
+              "schedule_start": "2022-01-18 08:00:00",
+              "schedule_end_time": "2022-01-28 17:00:00",
+              "cpm_start_time": "2022-01-18 08:00:00",
+              "cpm_finish_time": "2022-03-24 08:00:00",
+              "is_culprit": true,
+              "free_float": 0.0,
+              "predecessor": {},
+              "percent": 0.0,
+              "activity_name": "B6 WT Epoxy C/D - After Equipment Install"
           }
-        }
       ],
       [
-        {
-          "node": "WT.PLC.2860",
-          "percent": 0,
-          "free_float": 0,
-          "is_culprit": true,
-          "predecessor": {},
-          "activity_name": "B6 WT Labeling C/D",
-          "activity_type": "TASK",
-          "cpm_start_time": "2022-03-24 08:00:00",
-          "schedule_start": "2022-03-04 08:00:00",
-          "cpm_finish_time": "2022-04-06 17:00:00",
-          "schedule_end_time": "2022-03-17 17:00:00",
-          "culprit_path_graph": {
-            "graph": {},
-            "links": [
-              {
-                "source": "WT.PLC.2860",
-                "target": "WT.1700"
-              }
-            ],
-            "nodes": [
-              {
-                "id": "WT.PLC.2860",
-                "NAME": "B6 WT Labeling C/D",
-                "PERCENT": 0,
-                "FREE_FLOAT": 0,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2022-03-24 08:00:00",
-                "CPM_FINISH_TIME": "2022-04-06 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-03-17 17:00:00",
-                "SCHEDULED_START_TIME": "2022-03-04 08:00:00"
-              },
-              {
-                "id": "WT.1700",
-                "NAME": "B6 WT Water Treatment Area C/D Construction Complete",
-                "PERCENT": 0,
-                "FREE_FLOAT": 56,
-                "ACTIVITY_TYPE": "FINISH_MILESTONE",
-                "CPM_START_TIME": "2022-04-06 17:00:00",
-                "CPM_FINISH_TIME": "2022-04-06 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-03-25 17:00:00",
-                "SCHEDULED_START_TIME": "2022-03-25 17:00:00"
-              }
-            ],
-            "directed": true,
-            "multigraph": false
+          {
+              "node": "WT.PLC.2830",
+              "activity_type": "TASK",
+              "schedule_start": "2021-08-03 08:00:00",
+              "schedule_end_time": "2021-09-10 17:00:00",
+              "cpm_start_time": "2021-11-19 00:00:00",
+              "cpm_finish_time": "2022-03-24 08:00:00",
+              "is_culprit": true,
+              "free_float": 0.0,
+              "predecessor": {},
+              "percent": 0.6071,
+              "activity_name": "B6 WT Set Water Treatment Enclosure & OH Rough In C/D"
           }
-        }
       ],
       [
-        {
-          "node": "WT.1900",
-          "percent": 0,
-          "free_float": 0,
-          "is_culprit": true,
-          "predecessor": {},
-          "activity_name": "B6 WT Doors & Hardware C/D",
-          "activity_type": "TASK",
-          "cpm_start_time": "2022-03-24 08:00:00",
-          "schedule_start": "2022-03-07 08:00:00",
-          "cpm_finish_time": "2022-03-24 08:00:00",
-          "schedule_end_time": "2022-03-18 17:00:00",
-          "culprit_path_graph": {
-            "graph": {},
-            "links": [
-              {
-                "source": "WT.1900",
-                "target": "WT.1700"
-              },
-              {
-                "source": "WT.1900",
-                "target": "WT.1750"
-              },
-              {
-                "source": "WT.1750",
-                "target": "WT.1700"
-              }
-            ],
-            "nodes": [
-              {
-                "id": "WT.1900",
-                "NAME": "B6 WT Doors & Hardware C/D",
-                "PERCENT": 0,
-                "FREE_FLOAT": 0,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2022-03-24 08:00:00",
-                "CPM_FINISH_TIME": "2022-03-24 08:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-03-18 17:00:00",
-                "SCHEDULED_START_TIME": "2022-03-07 08:00:00"
-              },
-              {
-                "id": "WT.1700",
-                "NAME": "B6 WT Water Treatment Area C/D Construction Complete",
-                "PERCENT": 0,
-                "FREE_FLOAT": 56,
-                "ACTIVITY_TYPE": "FINISH_MILESTONE",
-                "CPM_START_TIME": "2022-04-06 17:00:00",
-                "CPM_FINISH_TIME": "2022-04-06 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-03-25 17:00:00",
-                "SCHEDULED_START_TIME": "2022-03-25 17:00:00"
-              },
-              {
-                "id": "WT.1750",
-                "NAME": "B6 WT Final Details C/D",
-                "PERCENT": 0,
-                "FREE_FLOAT": 5,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2022-03-24 08:00:00",
-                "CPM_FINISH_TIME": "2022-03-30 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-03-25 17:00:00",
-                "SCHEDULED_START_TIME": "2022-03-21 08:00:00"
-              }
-            ],
-            "directed": true,
-            "multigraph": false
+          {
+              "node": "WT.1900",
+              "activity_type": "TASK",
+              "schedule_start": "2022-03-07 08:00:00",
+              "schedule_end_time": "2022-03-18 17:00:00",
+              "cpm_start_time": "2022-03-24 08:00:00",
+              "cpm_finish_time": "2022-03-24 08:00:00",
+              "is_culprit": true,
+              "free_float": 0.0,
+              "predecessor": {},
+              "percent": 0.0,
+              "activity_name": "B6 WT Doors & Hardware C/D"
           }
-        }
       ],
       [
-        {
-          "node": "WT.PLC.2830",
-          "percent": 0.6071,
-          "free_float": 0,
-          "is_culprit": true,
-          "predecessor": {},
-          "activity_name": "B6 WT Set Water Treatment Enclosure & OH Rough In C/D",
-          "activity_type": "TASK",
-          "cpm_start_time": "2021-11-19 00:00:00",
-          "schedule_start": "2021-08-03 08:00:00",
-          "cpm_finish_time": "2022-03-24 08:00:00",
-          "schedule_end_time": "2021-09-10 17:00:00",
-          "culprit_path_graph": {
-            "graph": {},
-            "links": [
-              {
-                "source": "WT.PLC.2830",
-                "target": "WT.1710"
-              },
-              {
-                "source": "WT.1710",
-                "target": "WT.1720"
-              },
-              {
-                "source": "WT.1720",
-                "target": "WT.1724"
-              },
-              {
-                "source": "WT.1724",
-                "target": "WT.1730"
-              },
-              {
-                "source": "WT.1724",
-                "target": "WT.1770"
-              },
-              {
-                "source": "WT.1724",
-                "target": "WT.1790"
-              },
-              {
-                "source": "WT.1724",
-                "target": "WT.1900"
-              },
-              {
-                "source": "WT.1724",
-                "target": "WT.PLC.2850"
-              },
-              {
-                "source": "WT.1730",
-                "target": "WT.1900"
-              },
-              {
-                "source": "WT.1900",
-                "target": "WT.1700"
-              },
-              {
-                "source": "WT.1900",
-                "target": "WT.1750"
-              },
-              {
-                "source": "WT.1750",
-                "target": "WT.1700"
-              },
-              {
-                "source": "WT.1770",
-                "target": "WT.1730"
-              },
-              {
-                "source": "WT.1770",
-                "target": "WT.1900"
-              },
-              {
-                "source": "WT.1790",
-                "target": "WT.1730"
-              },
-              {
-                "source": "WT.1790",
-                "target": "WT.1740"
-              },
-              {
-                "source": "WT.1740",
-                "target": "WT.1750"
-              },
-              {
-                "source": "WT.1740",
-                "target": "WT.1840"
-              },
-              {
-                "source": "WT.1840",
-                "target": "WT.1700"
-              },
-              {
-                "source": "WT.1840",
-                "target": "WT.1900"
-              },
-              {
-                "source": "WT.PLC.2850",
-                "target": "WT.PLC.2860"
-              },
-              {
-                "source": "WT.PLC.2860",
-                "target": "WT.1700"
-              }
-            ],
-            "nodes": [
-              {
-                "id": "WT.PLC.2830",
-                "NAME": "B6 WT Set Water Treatment Enclosure & OH Rough In C/D",
-                "PERCENT": 0.6071,
-                "FREE_FLOAT": 0,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2021-11-19 00:00:00",
-                "CPM_FINISH_TIME": "2022-03-24 08:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2021-09-10 17:00:00",
-                "SCHEDULED_START_TIME": "2021-08-03 08:00:00"
-              },
-              {
-                "id": "WT.1710",
-                "NAME": "B6 WT Set / Install Tanks (Inside) C/D",
-                "PERCENT": 1,
-                "FREE_FLOAT": -100000,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2021-09-01 08:00:00",
-                "CPM_FINISH_TIME": "2021-09-08 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2021-09-08 17:00:00",
-                "SCHEDULED_START_TIME": "2021-09-01 08:00:00"
-              },
-              {
-                "id": "WT.1720",
-                "NAME": "B6 WT Stackout / Tie In Pumps / Install Humidifiers C/D - Start",
-                "PERCENT": 1,
-                "FREE_FLOAT": -100000,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2021-09-09 08:00:00",
-                "CPM_FINISH_TIME": "2021-09-29 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2021-09-29 17:00:00",
-                "SCHEDULED_START_TIME": "2021-09-09 08:00:00"
-              },
-              {
-                "id": "WT.1724",
-                "NAME": "B6 WT Stackout / Tie In Pumps / Install Humidifiers C/D - Finish",
-                "PERCENT": 1,
-                "FREE_FLOAT": -100000,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2021-09-30 08:00:00",
-                "CPM_FINISH_TIME": "2021-11-19 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2021-10-20 17:00:00",
-                "SCHEDULED_START_TIME": "2021-09-30 08:00:00"
-              },
-              {
-                "id": "WT.1730",
-                "NAME": "B6 WT Testing & Flushing C/D",
-                "PERCENT": 1,
-                "FREE_FLOAT": -100000,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2022-02-07 08:00:00",
-                "CPM_FINISH_TIME": "2022-02-18 00:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-02-17 17:00:00",
-                "SCHEDULED_START_TIME": "2022-02-07 08:00:00"
-              },
-              {
-                "id": "WT.1900",
-                "NAME": "B6 WT Doors & Hardware C/D",
-                "PERCENT": 0,
-                "FREE_FLOAT": 0,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2022-03-24 08:00:00",
-                "CPM_FINISH_TIME": "2022-03-24 08:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-03-18 17:00:00",
-                "SCHEDULED_START_TIME": "2022-03-07 08:00:00"
-              },
-              {
-                "id": "WT.1700",
-                "NAME": "B6 WT Water Treatment Area C/D Construction Complete",
-                "PERCENT": 0,
-                "FREE_FLOAT": 56,
-                "ACTIVITY_TYPE": "FINISH_MILESTONE",
-                "CPM_START_TIME": "2022-04-06 17:00:00",
-                "CPM_FINISH_TIME": "2022-04-06 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-03-25 17:00:00",
-                "SCHEDULED_START_TIME": "2022-03-25 17:00:00"
-              },
-              {
-                "id": "WT.1750",
-                "NAME": "B6 WT Final Details C/D",
-                "PERCENT": 0,
-                "FREE_FLOAT": 5,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2022-03-24 08:00:00",
-                "CPM_FINISH_TIME": "2022-03-30 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-03-25 17:00:00",
-                "SCHEDULED_START_TIME": "2022-03-21 08:00:00"
-              },
-              {
-                "id": "WT.1770",
-                "NAME": "B6 WT Set Chemical Treatment / Filter Skid C/D",
-                "PERCENT": 1,
-                "FREE_FLOAT": -100000,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2021-10-21 08:00:00",
-                "CPM_FINISH_TIME": "2021-11-03 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2021-11-03 17:00:00",
-                "SCHEDULED_START_TIME": "2021-10-21 08:00:00"
-              },
-              {
-                "id": "WT.1790",
-                "NAME": "B6 WT Line Voltage to Equipment C/D",
-                "PERCENT": 1,
-                "FREE_FLOAT": -100000,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2021-11-22 08:00:00",
-                "CPM_FINISH_TIME": "2022-02-07 08:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2021-12-30 17:00:00",
-                "SCHEDULED_START_TIME": "2021-11-22 08:00:00"
-              },
-              {
-                "id": "WT.1740",
-                "NAME": "B6 WT Pipe Insulation C/D",
-                "PERCENT": 1,
-                "FREE_FLOAT": -100000,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2022-01-11 08:00:00",
-                "CPM_FINISH_TIME": "2022-02-02 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-01-25 17:00:00",
-                "SCHEDULED_START_TIME": "2022-01-11 08:00:00"
-              },
-              {
-                "id": "WT.1840",
-                "NAME": "B6 WT Epoxy C/D - After Equipment Install",
-                "PERCENT": 0,
-                "FREE_FLOAT": 0,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2022-01-18 08:00:00",
-                "CPM_FINISH_TIME": "2022-03-24 08:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-01-28 17:00:00",
-                "SCHEDULED_START_TIME": "2022-01-18 08:00:00"
-              },
-              {
-                "id": "WT.PLC.2850",
-                "NAME": "B6 WT Trim WT Devices, Pull Wire & Terminate C/D",
-                "PERCENT": 0.4667,
-                "FREE_FLOAT": 0,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2021-12-06 08:00:00",
-                "CPM_FINISH_TIME": "2022-03-24 08:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2021-12-28 17:00:00",
-                "SCHEDULED_START_TIME": "2021-12-06 08:00:00"
-              },
-              {
-                "id": "WT.PLC.2860",
-                "NAME": "B6 WT Labeling C/D",
-                "PERCENT": 0,
-                "FREE_FLOAT": 0,
-                "ACTIVITY_TYPE": "TASK",
-                "CPM_START_TIME": "2022-03-24 08:00:00",
-                "CPM_FINISH_TIME": "2022-04-06 17:00:00",
-                "REPORTING_METHOD": "GC",
-                "SCHEDULED_END_TIME": "2022-03-17 17:00:00",
-                "SCHEDULED_START_TIME": "2022-03-04 08:00:00"
-              }
-            ],
-            "directed": true,
-            "multigraph": false
+          {
+              "node": "WT.PLC.2860",
+              "activity_type": "TASK",
+              "schedule_start": "2022-03-04 08:00:00",
+              "schedule_end_time": "2022-03-17 17:00:00",
+              "cpm_start_time": "2022-03-24 08:00:00",
+              "cpm_finish_time": "2022-04-06 17:00:00",
+              "is_culprit": true,
+              "free_float": 0.0,
+              "predecessor": {},
+              "percent": 0.0,
+              "activity_name": "B6 WT Labeling C/D"
           }
-        }
       ]
-    ],
-    "activity_name": "B6 WT Water Treatment Area C/D Construction Complete",
-    "activity_type": "FINISH_MILESTONE",
-    "cpm_start_time": "2022-04-06 17:00:00",
-    "schedule_start": "2022-03-25 17:00:00",
-    "cpm_finish_time": "2022-04-06 17:00:00",
-    "schedule_end_time": "2022-03-25 17:00:00"
-  }
+  ],
+  "schedule_start": "2022-03-25 17:00:00",
+  "schedule_end_time": "2022-03-25 17:00:00",
+  "cpm_start_time": "2022-04-06 17:00:00",
+  "cpm_finish_time": "2022-04-06 17:00:00",
+  "free_float": 56.0,
+  "percent": 0.0,
+  "activity_name": "B6 WT Water Treatment Area C/D Construction Complete",
+  "culprits_path_graph": [
+      {
+          "directed": true,
+          "multigraph": false,
+          "graph": {},
+          "nodes": [
+              {
+                  "ACTIVITY_TYPE": "TASK",
+                  "FREE_FLOAT": 0.0,
+                  "PERCENT": 0.4286,
+                  "REPORTING_METHOD": "GC",
+                  "SCHEDULED_START_TIME": "2021-08-23 08:00:00",
+                  "SCHEDULED_END_TIME": "2021-09-10 17:00:00",
+                  "CPM_START_TIME": "2021-11-19 00:00:00",
+                  "CPM_FINISH_TIME": "2022-03-24 08:00:00",
+                  "NAME": "B6 WT FCU and EF Controls C/D",
+                  "id": "WT.PLC.2840"
+              },
+              {
+                  "ACTIVITY_TYPE": "TASK",
+                  "FREE_FLOAT": -100000.0,
+                  "PERCENT": 1.0,
+                  "REPORTING_METHOD": "GC",
+                  "SCHEDULED_START_TIME": "2021-09-01 08:00:00",
+                  "SCHEDULED_END_TIME": "2021-09-08 17:00:00",
+                  "CPM_START_TIME": "2021-09-01 08:00:00",
+                  "CPM_FINISH_TIME": "2021-09-08 17:00:00",
+                  "NAME": "B6 WT Set / Install Tanks (Inside) C/D",
+                  "id": "WT.1710"
+              },
+              {
+                  "ACTIVITY_TYPE": "TASK",
+                  "FREE_FLOAT": -100000.0,
+                  "PERCENT": 1.0,
+                  "REPORTING_METHOD": "GC",
+                  "SCHEDULED_START_TIME": "2021-09-09 08:00:00",
+                  "SCHEDULED_END_TIME": "2021-09-29 17:00:00",
+                  "CPM_START_TIME": "2021-09-09 08:00:00",
+                  "CPM_FINISH_TIME": "2021-09-29 17:00:00",
+                  "NAME": "B6 WT Stackout / Tie In Pumps / Install Humidifiers C/D - Start",
+                  "id": "WT.1720"
+              },
+              {
+                  "ACTIVITY_TYPE": "TASK",
+                  "FREE_FLOAT": -100000.0,
+                  "PERCENT": 1.0,
+                  "REPORTING_METHOD": "GC",
+                  "SCHEDULED_START_TIME": "2021-09-30 08:00:00",
+                  "SCHEDULED_END_TIME": "2021-10-20 17:00:00",
+                  "CPM_START_TIME": "2021-09-30 08:00:00",
+                  "CPM_FINISH_TIME": "2021-11-19 17:00:00",
+                  "NAME": "B6 WT Stackout / Tie In Pumps / Install Humidifiers C/D - Finish",
+                  "id": "WT.1724"
+              },
+              {
+                  "ACTIVITY_TYPE": "TASK",
+                  "FREE_FLOAT": -100000.0,
+                  "PERCENT": 1.0,
+                  "REPORTING_METHOD": "GC",
+                  "SCHEDULED_START_TIME": "2022-02-07 08:00:00",
+                  "SCHEDULED_END_TIME": "2022-02-17 17:00:00",
+                  "CPM_START_TIME": "2022-02-07 08:00:00",
+                  "CPM_FINISH_TIME": "2022-02-18 00:00:00",
+                  "NAME": "B6 WT Testing & Flushing C/D",
+                  "id": "WT.1730"
+              },
+              {
+                  "ACTIVITY_TYPE": "TASK",
+                  "FREE_FLOAT": 0.0,
+                  "PERCENT": 0.0,
+                  "REPORTING_METHOD": "GC",
+                  "SCHEDULED_START_TIME": "2022-03-07 08:00:00",
+                  "SCHEDULED_END_TIME": "2022-03-18 17:00:00",
+                  "CPM_START_TIME": "2022-03-24 08:00:00",
+                  "CPM_FINISH_TIME": "2022-03-24 08:00:00",
+                  "NAME": "B6 WT Doors & Hardware C/D",
+                  "id": "WT.1900"
+              },
+              {
+                  "ACTIVITY_TYPE": "FINISH_MILESTONE",
+                  "FREE_FLOAT": 56.0,
+                  "PERCENT": 0.0,
+                  "REPORTING_METHOD": "GC",
+                  "SCHEDULED_START_TIME": "2022-03-25 17:00:00",
+                  "SCHEDULED_END_TIME": "2022-03-25 17:00:00",
+                  "CPM_START_TIME": "2022-04-06 17:00:00",
+                  "CPM_FINISH_TIME": "2022-04-06 17:00:00",
+                  "NAME": "B6 WT Water Treatment Area C/D Construction Complete",
+                  "id": "WT.1700"
+              },
+              {
+                  "ACTIVITY_TYPE": "TASK",
+                  "FREE_FLOAT": 5.0,
+                  "PERCENT": 0.0,
+                  "REPORTING_METHOD": "GC",
+                  "SCHEDULED_START_TIME": "2022-03-21 08:00:00",
+                  "SCHEDULED_END_TIME": "2022-03-25 17:00:00",
+                  "CPM_START_TIME": "2022-03-24 08:00:00",
+                  "CPM_FINISH_TIME": "2022-03-30 17:00:00",
+                  "NAME": "B6 WT Final Details C/D",
+                  "id": "WT.1750"
+              },
+              {
+                  "ACTIVITY_TYPE": "TASK",
+                  "FREE_FLOAT": -100000.0,
+                  "PERCENT": 1.0,
+                  "REPORTING_METHOD": "GC",
+                  "SCHEDULED_START_TIME": "2021-10-21 08:00:00",
+                  "SCHEDULED_END_TIME": "2021-11-03 17:00:00",
+                  "CPM_START_TIME": "2021-10-21 08:00:00",
+                  "CPM_FINISH_TIME": "2021-11-03 17:00:00",
+                  "NAME": "B6 WT Set Chemical Treatment / Filter Skid C/D",
+                  "id": "WT.1770"
+              },
+              {
+                  "ACTIVITY_TYPE": "TASK",
+                  "FREE_FLOAT": -100000.0,
+                  "PERCENT": 1.0,
+                  "REPORTING_METHOD": "GC",
+                  "SCHEDULED_START_TIME": "2021-11-22 08:00:00",
+                  "SCHEDULED_END_TIME": "2021-12-30 17:00:00",
+                  "CPM_START_TIME": "2021-11-22 08:00:00",
+                  "CPM_FINISH_TIME": "2022-02-07 08:00:00",
+                  "NAME": "B6 WT Line Voltage to Equipment C/D",
+                  "id": "WT.1790"
+              },
+              {
+                  "ACTIVITY_TYPE": "TASK",
+                  "FREE_FLOAT": -100000.0,
+                  "PERCENT": 1.0,
+                  "REPORTING_METHOD": "GC",
+                  "SCHEDULED_START_TIME": "2022-01-11 08:00:00",
+                  "SCHEDULED_END_TIME": "2022-01-25 17:00:00",
+                  "CPM_START_TIME": "2022-01-11 08:00:00",
+                  "CPM_FINISH_TIME": "2022-02-02 17:00:00",
+                  "NAME": "B6 WT Pipe Insulation C/D",
+                  "id": "WT.1740"
+              },
+              {
+                  "ACTIVITY_TYPE": "TASK",
+                  "FREE_FLOAT": 0.0,
+                  "PERCENT": 0.0,
+                  "REPORTING_METHOD": "GC",
+                  "SCHEDULED_START_TIME": "2022-01-18 08:00:00",
+                  "SCHEDULED_END_TIME": "2022-01-28 17:00:00",
+                  "CPM_START_TIME": "2022-01-18 08:00:00",
+                  "CPM_FINISH_TIME": "2022-03-24 08:00:00",
+                  "NAME": "B6 WT Epoxy C/D - After Equipment Install",
+                  "id": "WT.1840"
+              },
+              {
+                  "ACTIVITY_TYPE": "TASK",
+                  "FREE_FLOAT": 0.0,
+                  "PERCENT": 0.4667,
+                  "REPORTING_METHOD": "GC",
+                  "SCHEDULED_START_TIME": "2021-12-06 08:00:00",
+                  "SCHEDULED_END_TIME": "2021-12-28 17:00:00",
+                  "CPM_START_TIME": "2021-12-06 08:00:00",
+                  "CPM_FINISH_TIME": "2022-03-24 08:00:00",
+                  "NAME": "B6 WT Trim WT Devices, Pull Wire & Terminate C/D",
+                  "id": "WT.PLC.2850"
+              },
+              {
+                  "ACTIVITY_TYPE": "TASK",
+                  "FREE_FLOAT": 0.0,
+                  "PERCENT": 0.0,
+                  "REPORTING_METHOD": "GC",
+                  "SCHEDULED_START_TIME": "2022-03-04 08:00:00",
+                  "SCHEDULED_END_TIME": "2022-03-17 17:00:00",
+                  "CPM_START_TIME": "2022-03-24 08:00:00",
+                  "CPM_FINISH_TIME": "2022-04-06 17:00:00",
+                  "NAME": "B6 WT Labeling C/D",
+                  "id": "WT.PLC.2860"
+              },
+              {
+                  "ACTIVITY_TYPE": "TASK",
+                  "FREE_FLOAT": 0.0,
+                  "PERCENT": 0.6071,
+                  "REPORTING_METHOD": "GC",
+                  "SCHEDULED_START_TIME": "2021-08-03 08:00:00",
+                  "SCHEDULED_END_TIME": "2021-09-10 17:00:00",
+                  "CPM_START_TIME": "2021-11-19 00:00:00",
+                  "CPM_FINISH_TIME": "2022-03-24 08:00:00",
+                  "NAME": "B6 WT Set Water Treatment Enclosure & OH Rough In C/D",
+                  "id": "WT.PLC.2830"
+              }
+          ],
+          "links": [
+              {
+                  "source": "WT.PLC.2840",
+                  "target": "WT.1710"
+              },
+              {
+                  "source": "WT.1710",
+                  "target": "WT.1720"
+              },
+              {
+                  "source": "WT.1720",
+                  "target": "WT.1724"
+              },
+              {
+                  "source": "WT.1724",
+                  "target": "WT.1730"
+              },
+              {
+                  "source": "WT.1724",
+                  "target": "WT.1770"
+              },
+              {
+                  "source": "WT.1724",
+                  "target": "WT.1790"
+              },
+              {
+                  "source": "WT.1724",
+                  "target": "WT.1900"
+              },
+              {
+                  "source": "WT.1724",
+                  "target": "WT.PLC.2850"
+              },
+              {
+                  "source": "WT.1730",
+                  "target": "WT.1900"
+              },
+              {
+                  "source": "WT.1900",
+                  "target": "WT.1700"
+              },
+              {
+                  "source": "WT.1900",
+                  "target": "WT.1750"
+              },
+              {
+                  "source": "WT.1750",
+                  "target": "WT.1700"
+              },
+              {
+                  "source": "WT.1770",
+                  "target": "WT.1730"
+              },
+              {
+                  "source": "WT.1770",
+                  "target": "WT.1900"
+              },
+              {
+                  "source": "WT.1790",
+                  "target": "WT.1730"
+              },
+              {
+                  "source": "WT.1790",
+                  "target": "WT.1740"
+              },
+              {
+                  "source": "WT.1740",
+                  "target": "WT.1750"
+              },
+              {
+                  "source": "WT.1740",
+                  "target": "WT.1840"
+              },
+              {
+                  "source": "WT.1840",
+                  "target": "WT.1700"
+              },
+              {
+                  "source": "WT.1840",
+                  "target": "WT.1900"
+              },
+              {
+                  "source": "WT.PLC.2850",
+                  "target": "WT.PLC.2860"
+              },
+              {
+                  "source": "WT.PLC.2860",
+                  "target": "WT.1700"
+              },
+              {
+                  "source": "WT.PLC.2830",
+                  "target": "WT.1710"
+              }
+          ]
+      }
+  ]
+}

@@ -4,24 +4,48 @@ document.addEventListener('DOMContentLoaded', function() {
       return response.json();
     })
     .then(jsonData => {
-      var pred_graph = jsonData["pred_graph"];
+      var nodesList = jsonData["culprits_path_graph"][0].nodes;
       var nodes = {};
-      for (let p = 0; p < pred_graph.length; ++p) {
-        let currNodesList = pred_graph[p][0].culprit_path_graph.nodes;
-        for (let curr = 0; curr < currNodesList.length; ++curr) {
-          nodes[currNodesList[curr].id] = {
-            "CPM_START_TIME": currNodesList[curr].CPM_START_TIME,
-            "CPM_FINISH_TIME": currNodesList[curr].CPM_FINISH_TIME,
-          }; // for records 
-        }
+      var edges = {};
+      // save nodes and edges 
+      for (let p = 0; p < nodesList.length; ++p) {
+        nodes[nodesList[p].id] = {
+          "NAME": nodesList[p].NAME,
+          "CPM_START_TIME": nodesList[p].CPM_START_TIME,
+          "CPM_FINISH_TIME": nodesList[p].CPM_FINISH_TIME,
+        }; // for records 
+        edges[nodesList[p].id] = new Set();
       }
+      var links = [...jsonData["culprits_path_graph"][0].links];
+      for (let j = 0; j < links.length; ++j) {
+        let targets = edges[links[j].source];
+          targets.add(links[j].target);
+          edges[links[j].source] = targets;
+      }
+      // add nodes 
       var elements = [];
       for (let nodeId in nodes) {
         elements.push({
-          data: { id: nodeId }
+          group: 'nodes',
+          data: { 
+            id: nodeId,
+          }
         });
       }
-      document.getElementById("title").textContent = "Explainable Schedule";
+      // add edges 
+      for (let sourceNode in edges){
+        for ( let targetNode of edges[sourceNode]) {
+          elements.push({
+          group: 'edges',
+          data: {
+            id: sourceNode + " -> " + targetNode,
+            source: sourceNode,
+            target: targetNode,
+          }
+        });
+        }
+      }
+      
       // MANU START config 
       var cy = cytoscape({
         container: $('#cy'),
@@ -41,7 +65,9 @@ document.addEventListener('DOMContentLoaded', function() {
               width: 100,
               height: 50,
               "text-valign": "center",
-              "text-halign": "center"
+              "text-halign": "center",
+              'border-color': 'red',
+              'border-opacity': '0.85',
             },
           },
 
@@ -64,6 +90,9 @@ document.addEventListener('DOMContentLoaded', function() {
               'line-color': '#FFC028',
               'target-arrow-color': '#FFC028',
               'source-arrow-color': '#FFC028',
+              'border-color': '#ccc',
+              'border-width': '2px',
+              'border-opacity': '0.85',
               color: '#fff',
             }
           },
@@ -76,6 +105,9 @@ document.addEventListener('DOMContentLoaded', function() {
               'line-color': '#FFC028',
               'target-arrow-color': '#FFC028',
               'source-arrow-color': '#FFC028',
+              'border-color': '#f5f5f5',
+              'border-width': '2px',
+              'border-opacity': '0.85',
               color: '#fff',
             }
           },
@@ -105,27 +137,15 @@ document.addEventListener('DOMContentLoaded', function() {
           transform: function(node, position) { return position; } // transform a given node position. Useful for changing flow direction in discrete layouts 
         }
       });
-      var links = [];
-      for (let p = 0; p < pred_graph.length; ++p) {
-        links = [...links, ...pred_graph[p][0].culprit_path_graph.links];
-      }
-      for (let j = 0; j < links.length; ++j) {
-        cy.add({
-          group: 'edges',
-          data: {
-            id: links[j].source + "-" + links[j].target + "-" + j, // add j for repeatitive edges else nodes will be left alone 
-            source: links[j].source,
-            target: links[j].target
-          }
-        })
-      }
       // MANU END config 
-      cy.on('tap', 'node', function(event) {
+
+      document.getElementById("title").textContent = "Explainable Schedule";
+      cy.on('mouseover', 'node', function(event) {
         let node = event.target;
-        console.log(JSON.stringify(nodes[node.id()]));
         $("#NODE_ID").text(node.id());
+        $("#ACTIVITY_NAME").text(nodes[node.id()].NAME);
         $("#START_TIME").text(nodes[node.id()].CPM_START_TIME);
-        $("#CPM_FINISH_TIME").text(nodes[node.id()].CPM_FINISH_TIME);
+        $("#FINISH_TIME").text(nodes[node.id()].CPM_FINISH_TIME);
       });
     });
 });
