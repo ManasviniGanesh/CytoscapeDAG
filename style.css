@@ -3,14 +3,7 @@
   height: 1000px;
   display: block;
 }
-#TITLE {
-  top: 500px;
-  left: 720px;
-  color: #28313b;
-  position: relative;
-}
 body {
   font-family: -apple-system, Helvetica Neue, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Open Sans, sans-serif;
-  text-transform: uppercase;
 }
